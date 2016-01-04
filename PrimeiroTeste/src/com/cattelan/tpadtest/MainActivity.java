@@ -71,9 +71,10 @@ public class MainActivity extends Activity {
 boolean pressed;
 int sim = 0;
 int NoMomento = 0;
-public String[] latinSquareB = {"ABNCED", "BCADNE", "CDBEAN", "DECNBA", "ENDACB", "NAEBDC"};
+public String[] latinSquareB = {"ABNCED", "BCADNE", "CDBEAN", "DECNBA", "ENDACB", "NAEBDC"}; //6
+//public String[] latinSquareB = {"ABHCGDFE", "BCADHEGF", "CDBEAFHG", "DECFBGAH", "EFDGCHBA", "FGEHDACB", "GHFAEBDC", "HAGBFCED"}; //8
 public char[][] test = new char[6][]; 
-public int [] score = new int [6];
+public int [] score = new int [8];
 int indexTest;
 int tipoOnda;
 
@@ -100,6 +101,18 @@ protected void onCreate(Bundle savedInstanceState) {
 	test[3] = (latinSquareB[3] + latinSquareB[4] +latinSquareB[2] + latinSquareB[5] + latinSquareB[1] + latinSquareB[0]).toCharArray();
 	test[4] = (latinSquareB[4] + latinSquareB[5] +latinSquareB[3] + latinSquareB[0] + latinSquareB[2] + latinSquareB[1]).toCharArray();
 	test[5] = (latinSquareB[5] + latinSquareB[0] +latinSquareB[4] + latinSquareB[1] + latinSquareB[3] + latinSquareB[2]).toCharArray();
+	//6
+	/*
+	test[0] = (latinSquareB[0] + latinSquareB[1] +latinSquareB[7] + latinSquareB[2] + latinSquareB[6] + latinSquareB[3] + latinSquareB[5] + latinSquareB[4]).toCharArray();
+	test[1] = (latinSquareB[1] + latinSquareB[2] +latinSquareB[0] + latinSquareB[3] + latinSquareB[7] + latinSquareB[4] + latinSquareB[6] + latinSquareB[5]).toCharArray();
+	test[2] = (latinSquareB[2] + latinSquareB[3] +latinSquareB[1] + latinSquareB[4] + latinSquareB[0] + latinSquareB[5] + latinSquareB[7] + latinSquareB[6]).toCharArray(); 
+	test[3] = (latinSquareB[3] + latinSquareB[4] +latinSquareB[2] + latinSquareB[5] + latinSquareB[1] + latinSquareB[6] + latinSquareB[0] + latinSquareB[7]).toCharArray();
+	test[4] = (latinSquareB[4] + latinSquareB[5] +latinSquareB[3] + latinSquareB[6] + latinSquareB[2] + latinSquareB[7] + latinSquareB[1] + latinSquareB[0]).toCharArray();
+	test[5] = (latinSquareB[5] + latinSquareB[6] +latinSquareB[4] + latinSquareB[7] + latinSquareB[3] + latinSquareB[0] + latinSquareB[2] + latinSquareB[1]).toCharArray();
+	test[6] = (latinSquareB[6] + latinSquareB[7] +latinSquareB[5] + latinSquareB[0] + latinSquareB[4] + latinSquareB[1] + latinSquareB[3] + latinSquareB[2]).toCharArray();
+	test[7] = (latinSquareB[7] + latinSquareB[0] +latinSquareB[6] + latinSquareB[1] + latinSquareB[5] + latinSquareB[2] + latinSquareB[4] + latinSquareB[3]).toCharArray();
+	*/
+	//8
 	
 	r = new Random();
 	ladoTela = r.nextInt(max - min) + min;
