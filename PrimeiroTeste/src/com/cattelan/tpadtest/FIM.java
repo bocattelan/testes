@@ -31,7 +31,9 @@ public class FIM extends Activity {
 			"\nTeste C: " + valores[2] +
 			"\nTeste D: " + valores[3] +
 			"\nTeste E: " + valores[4] +
-			"\nTeste F: " + valores[5];
+			"\nTeste F: " + valores[5] +
+			"\nTeste G: " + valores[6] +
+			"\nTeste H: " + valores[7];
 			
 	myAwesomeTextView.setText(texto);
 	}

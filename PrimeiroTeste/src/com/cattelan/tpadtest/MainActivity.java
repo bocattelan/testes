@@ -50,13 +50,15 @@ public class MainActivity extends Activity {
     	tamanho = new HashMap<Character, Integer>();
     	//a tela do MOTO G possui 1280 pixels de altura no total e 9,03cm total
     	//assim, cada pixel possui 0,007cm de altura
-    	
+    	/*
     	tamanho.put('A', 6);
     	tamanho.put('B', 12);
     	tamanho.put('C', 25);
     	tamanho.put('D', 50);
     	tamanho.put('E', 75); 
-    	tamanho.put('N', 100);//0,7cm
+    	tamanho.put('F', 100);//0,7cm
+    	//6
+    	*/
     	
     	/*
     	tamanho.put('A', 100);
@@ -66,14 +68,25 @@ public class MainActivity extends Activity {
     	tamanho.put('E', 100); //0,7cm
     	tamanho.put('N', 100);
     	*/
+    	
+    	tamanho.put('A', 6);
+    	tamanho.put('B', 12);
+    	tamanho.put('C', 25);
+    	tamanho.put('D', 50);
+    	tamanho.put('E', 75); 
+    	tamanho.put('F', 100);//0,7cm
+    	tamanho.put('G', 200); 
+    	tamanho.put('H', 400); 
+    	//8
+    	
     }
 //private boolean isTouch = false;
 boolean pressed;
 int sim = 0;
 int NoMomento = 0;
-public String[] latinSquareB = {"ABNCED", "BCADNE", "CDBEAN", "DECNBA", "ENDACB", "NAEBDC"}; //6
-//public String[] latinSquareB = {"ABHCGDFE", "BCADHEGF", "CDBEAFHG", "DECFBGAH", "EFDGCHBA", "FGEHDACB", "GHFAEBDC", "HAGBFCED"}; //8
-public char[][] test = new char[6][]; 
+//public String[] latinSquareB = {"ABFCED", "BCADFE", "CDBEAF", "DECFBA", "EFDACB", "FAEBDC"}; //6
+public String[] latinSquareB = {"ABHCGDFE", "BCADHEGF", "CDBEAFHG", "DECFBGAH", "EFDGCHBA", "FGEHDACB", "GHFAEBDC", "HAGBFCED"}; //8
+public char[][] test = new char[8][]; 
 public int [] score = new int [8];
 int indexTest;
 int tipoOnda;
@@ -94,7 +107,8 @@ View decorView;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	//http://hamsterandwheel.com/grids/index2d.php GERADOR DE LATIN SQUARE
+	/*
+	//http://statpages.org/latinsq.html DE ONDE TIREI A BALANCED LATIN SQUARE
 	test[0] = (latinSquareB[0] + latinSquareB[1] +latinSquareB[5] + latinSquareB[2] + latinSquareB[4] + latinSquareB[3]).toCharArray();
 	test[1] = (latinSquareB[1] + latinSquareB[2] +latinSquareB[0] + latinSquareB[3] + latinSquareB[5] + latinSquareB[4]).toCharArray();
 	test[2] = (latinSquareB[2] + latinSquareB[3] +latinSquareB[1] + latinSquareB[4] + latinSquareB[0] + latinSquareB[5]).toCharArray(); 
@@ -102,7 +116,8 @@ protected void onCreate(Bundle savedInstanceState) {
 	test[4] = (latinSquareB[4] + latinSquareB[5] +latinSquareB[3] + latinSquareB[0] + latinSquareB[2] + latinSquareB[1]).toCharArray();
 	test[5] = (latinSquareB[5] + latinSquareB[0] +latinSquareB[4] + latinSquareB[1] + latinSquareB[3] + latinSquareB[2]).toCharArray();
 	//6
-	/*
+	*/
+	
 	test[0] = (latinSquareB[0] + latinSquareB[1] +latinSquareB[7] + latinSquareB[2] + latinSquareB[6] + latinSquareB[3] + latinSquareB[5] + latinSquareB[4]).toCharArray();
 	test[1] = (latinSquareB[1] + latinSquareB[2] +latinSquareB[0] + latinSquareB[3] + latinSquareB[7] + latinSquareB[4] + latinSquareB[6] + latinSquareB[5]).toCharArray();
 	test[2] = (latinSquareB[2] + latinSquareB[3] +latinSquareB[1] + latinSquareB[4] + latinSquareB[0] + latinSquareB[5] + latinSquareB[7] + latinSquareB[6]).toCharArray(); 
@@ -111,7 +126,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	test[5] = (latinSquareB[5] + latinSquareB[6] +latinSquareB[4] + latinSquareB[7] + latinSquareB[3] + latinSquareB[0] + latinSquareB[2] + latinSquareB[1]).toCharArray();
 	test[6] = (latinSquareB[6] + latinSquareB[7] +latinSquareB[5] + latinSquareB[0] + latinSquareB[4] + latinSquareB[1] + latinSquareB[3] + latinSquareB[2]).toCharArray();
 	test[7] = (latinSquareB[7] + latinSquareB[0] +latinSquareB[6] + latinSquareB[1] + latinSquareB[5] + latinSquareB[2] + latinSquareB[4] + latinSquareB[3]).toCharArray();
-	*/
+	
 	//8
 	
 	r = new Random();
@@ -287,8 +302,14 @@ protected void onCreate(Bundle savedInstanceState) {
 		            	case 'E':
 		            		score[4]++;
 		            		break;
-		            	case 'N':
+		            	case 'F':
 		            		score[5]++;
+		            		break;
+		            	case 'G':
+		            		score[6]++;
+		            		break;
+		            	case 'H':
+		            		score[7]++;
 		            		break;
 		            	}
 		            	}
@@ -337,8 +358,14 @@ protected void onCreate(Bundle savedInstanceState) {
 			            	case 'E':
 			            		score[4]++;
 			            		break;
-			            	case 'N':
+			            	case 'F':
 			            		score[5]++;
+			            		break;
+			            	case 'G':
+			            		score[6]++;
+			            		break;
+			            	case 'H':
+			            		score[7]++;
 			            		break;
 			            	}
 			            	}
