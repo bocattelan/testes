@@ -69,6 +69,7 @@ public class MainActivity extends Activity {
     	tamanho.put('N', 100);
     	*/
     	
+    	/*
     	tamanho.put('A', 6);
     	tamanho.put('B', 12);
     	tamanho.put('C', 25);
@@ -78,6 +79,19 @@ public class MainActivity extends Activity {
     	tamanho.put('G', 200); 
     	tamanho.put('H', 400); 
     	//8
+    	 */
+    	
+    	tamanho.put('A', 100);
+    	tamanho.put('B', 100);
+    	tamanho.put('C', 100);
+    	tamanho.put('D', 100);
+    	tamanho.put('E', 100); 
+    	tamanho.put('F', 100);//0,7cm
+    	tamanho.put('G', 100); 
+    	tamanho.put('H', 100);
+    	tamanho.put('I', 100); 
+    	tamanho.put('J', 100); 
+    	//10
     	
     }
 //private boolean isTouch = false;
@@ -85,9 +99,11 @@ boolean pressed;
 int sim = 0;
 int NoMomento = 0;
 //public String[] latinSquareB = {"ABFCED", "BCADFE", "CDBEAF", "DECFBA", "EFDACB", "FAEBDC"}; //6
-public String[] latinSquareB = {"ABHCGDFE", "BCADHEGF", "CDBEAFHG", "DECFBGAH", "EFDGCHBA", "FGEHDACB", "GHFAEBDC", "HAGBFCED"}; //8
-public char[][] test = new char[8][]; 
-public int [] score = new int [8];
+//public String[] latinSquareB = {"ABHCGDFE", "BCADHEGF", "CDBEAFHG", "DECFBGAH", "EFDGCHBA", "FGEHDACB", "GHFAEBDC", "HAGBFCED"}; //8
+public String[] latinSquareB = {"ABJCIDHEGF", "BCADJEIFHG", "CDBEAFJGIH", "DECFBGAHJI", "EFDGCHBIAJ", "FGEHDICJBA", "GHFIEJDACB", "HIGJFAEBDC", "IJHAGBFCED", "JAIBHCGDFE"}; //8
+
+public char[][] test = new char[10][]; 
+public int [] score = new int [10];
 int indexTest;
 int tipoOnda;
 
@@ -118,6 +134,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	//6
 	*/
 	
+	/*
 	test[0] = (latinSquareB[0] + latinSquareB[1] +latinSquareB[7] + latinSquareB[2] + latinSquareB[6] + latinSquareB[3] + latinSquareB[5] + latinSquareB[4]).toCharArray();
 	test[1] = (latinSquareB[1] + latinSquareB[2] +latinSquareB[0] + latinSquareB[3] + latinSquareB[7] + latinSquareB[4] + latinSquareB[6] + latinSquareB[5]).toCharArray();
 	test[2] = (latinSquareB[2] + latinSquareB[3] +latinSquareB[1] + latinSquareB[4] + latinSquareB[0] + latinSquareB[5] + latinSquareB[7] + latinSquareB[6]).toCharArray(); 
@@ -126,8 +143,20 @@ protected void onCreate(Bundle savedInstanceState) {
 	test[5] = (latinSquareB[5] + latinSquareB[6] +latinSquareB[4] + latinSquareB[7] + latinSquareB[3] + latinSquareB[0] + latinSquareB[2] + latinSquareB[1]).toCharArray();
 	test[6] = (latinSquareB[6] + latinSquareB[7] +latinSquareB[5] + latinSquareB[0] + latinSquareB[4] + latinSquareB[1] + latinSquareB[3] + latinSquareB[2]).toCharArray();
 	test[7] = (latinSquareB[7] + latinSquareB[0] +latinSquareB[6] + latinSquareB[1] + latinSquareB[5] + latinSquareB[2] + latinSquareB[4] + latinSquareB[3]).toCharArray();
-	
 	//8
+	 */
+	
+	test[0] = (latinSquareB[0] + latinSquareB[1] +latinSquareB[9] + latinSquareB[2] + latinSquareB[8] + latinSquareB[3] + latinSquareB[7] + latinSquareB[4]+ latinSquareB[6]+ latinSquareB[5]).toCharArray();
+	test[1] = (latinSquareB[1] + latinSquareB[2] +latinSquareB[0] + latinSquareB[3] + latinSquareB[9] + latinSquareB[4] + latinSquareB[8] + latinSquareB[5]+ latinSquareB[7]+ latinSquareB[6]).toCharArray();
+	test[2] = (latinSquareB[2] + latinSquareB[3] +latinSquareB[1] + latinSquareB[4] + latinSquareB[0] + latinSquareB[5] + latinSquareB[9] + latinSquareB[6]+ latinSquareB[8]+ latinSquareB[7]).toCharArray(); 
+	test[3] = (latinSquareB[3] + latinSquareB[4] +latinSquareB[2] + latinSquareB[5] + latinSquareB[1] + latinSquareB[6] + latinSquareB[0] + latinSquareB[7]+ latinSquareB[9]+ latinSquareB[8]).toCharArray();
+	test[4] = (latinSquareB[4] + latinSquareB[5] +latinSquareB[3] + latinSquareB[6] + latinSquareB[2] + latinSquareB[7] + latinSquareB[1] + latinSquareB[8]+ latinSquareB[0]+ latinSquareB[9]).toCharArray();
+	test[5] = (latinSquareB[5] + latinSquareB[6] +latinSquareB[4] + latinSquareB[7] + latinSquareB[3] + latinSquareB[8] + latinSquareB[2] + latinSquareB[9]+ latinSquareB[1]+ latinSquareB[0]).toCharArray();
+	test[6] = (latinSquareB[6] + latinSquareB[7] +latinSquareB[5] + latinSquareB[8] + latinSquareB[4] + latinSquareB[9] + latinSquareB[3] + latinSquareB[0]+ latinSquareB[2]+ latinSquareB[1]).toCharArray();
+	test[7] = (latinSquareB[7] + latinSquareB[8] +latinSquareB[6] + latinSquareB[9] + latinSquareB[5] + latinSquareB[0] + latinSquareB[4] + latinSquareB[1]+ latinSquareB[3]+ latinSquareB[2]).toCharArray();
+	test[7] = (latinSquareB[8] + latinSquareB[9] +latinSquareB[7] + latinSquareB[0] + latinSquareB[6] + latinSquareB[1] + latinSquareB[5] + latinSquareB[2]+ latinSquareB[4]+ latinSquareB[3]).toCharArray();
+	test[7] = (latinSquareB[9] + latinSquareB[0] +latinSquareB[8] + latinSquareB[1] + latinSquareB[7] + latinSquareB[2] + latinSquareB[6] + latinSquareB[3]+ latinSquareB[5]+ latinSquareB[4]).toCharArray();
+	//10
 	
 	r = new Random();
 	ladoTela = r.nextInt(max - min) + min;
@@ -311,6 +340,12 @@ protected void onCreate(Bundle savedInstanceState) {
 		            	case 'H':
 		            		score[7]++;
 		            		break;
+		            	case 'I':
+		            		score[8]++;
+		            		break;
+		            	case 'J':
+		            		score[9]++;
+		            		break;
 		            	}
 		            	}
 		            	ladoTela = r.nextInt(max - min) + min;
@@ -366,6 +401,12 @@ protected void onCreate(Bundle savedInstanceState) {
 			            		break;
 			            	case 'H':
 			            		score[7]++;
+			            		break;
+			            	case 'I':
+			            		score[8]++;
+			            		break;
+			            	case 'J':
+			            		score[9]++;
 			            		break;
 			            	}
 			            	}
